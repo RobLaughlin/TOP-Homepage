@@ -1,4 +1,27 @@
 {
+    "name": "top-homepage",
+    "version": "1.0.0",
+    "description": "A homepage project for The Odin Project demonstrating the usage of responsive design",
+    "homepage": "https://github.com/RobLaughlin/TOP-Homepage#readme",
+    "bugs": {
+        "url": "https://github.com/RobLaughlin/TOP-Homepage/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RobLaughlin/TOP-Homepage.git"
+    },
+    "license": "ISC",
+    "author": "Rob Laughlin",
+    "type": "module",
+    "main": "babel.config.js",
+    "scripts": {
+        "test": "jest --verbose",
+        "watch": "jest --watch --verbose /*.js",
+        "build": "webpack --config webpack.prod.js",
+        "dev": "webpack serve --config webpack.dev.js",
+        "deploy": "webpack --config webpack.prod.js && git subtree push --prefix dist origin gh-pages",
+        "deploy-nobuild": "git subtree push --prefix dist origin gh-pages"
+    },
     "devDependencies": {
         "@babel/core": "^7.26.8",
         "@babel/preset-env": "^7.26.8",
@@ -12,14 +35,5 @@
         "webpack": "^5.97.1",
         "webpack-cli": "^6.0.1",
         "webpack-dev-server": "^5.2.0"
-    },
-    "scripts": {
-        "test": "jest --verbose",
-        "watch": "jest --watch --verbose /*.js",
-        "build": "webpack --config webpack.prod.js",
-        "dev": "webpack serve --config webpack.dev.js",
-        "deploy": "webpack --config webpack.prod.js && git subtree push --prefix dist origin gh-pages",
-        "deploy-nobuild": "git subtree push --prefix dist origin gh-pages"
-    },
-    "type": "module"
+    }
 }

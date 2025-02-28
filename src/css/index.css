@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf");
@@ -8,6 +9,7 @@
     src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf");
 }
 
+/* HEADER */
 #header .container {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.5));
     display: flex;
@@ -30,6 +32,24 @@
     height: 50vh;
     margin: auto;
     display: flex;
+}
+
+#header .imgContainer {
+    background-image: url("../images/headerImage.png");
+    background-size: cover;
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+}
+
+#header .imgContainer .imgText {
+    width: 50vh;
+    text-align: center;
+    margin-top: auto;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 200;
+    margin-bottom: 24px;
 }
 
 #header .textContainer {
@@ -59,7 +79,7 @@
 
 #header .text {
     font-family: "Roboto";
-    font-size: 24px;
+    font-size: max(1.5vw, 20px);
     margin-top: 24px;
     /* color: lightgray; */
     color: gray;

@@ -86,7 +86,7 @@
     margin-bottom: auto;
 }
 
-@media screen and (width < 900px) {
+@media screen and (width < 900px) and (width >= 650px) {
     #header .content {
         width: 75vw;
         position: relative;
@@ -144,5 +144,35 @@
 @media screen and (width < 900px) and (width > 800px) {
     #header .textContainer {
         height: 40vh;
+    }
+}
+
+@media screen and (width < 650px) {
+    #header .content {
+        display: grid;
+        margin-top: 32px;
+        margin-bottom: auto;
+        gap: 16px;
+        grid-template-rows: auto 1fr;
+    }
+
+    #header .imgContainer {
+        width: 100%;
+        max-width: 100%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-height: 100vw;
+    }
+
+    #header .imgContainer .imgText {
+        width: 100%;
+        font-size: min(8vw, 44px);
+        margin-bottom: 48px;
+    }
+
+    #header .textContainer,
+    #header .textContent {
+        margin: 0;
     }
 }

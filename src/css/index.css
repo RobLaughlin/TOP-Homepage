@@ -98,6 +98,75 @@
     padding-right: 8px;
 }
 
+#main {
+    margin-top: 32px;
+}
+
+#main .container {
+    margin: auto;
+    width: 90%;
+}
+
+#main .title {
+    font-family: "PlayfairDisplay";
+    font-size: 48px;
+    margin-bottom: 32px;
+}
+
+#main .container {
+    margin-bottom: 32px;
+}
+
+#main .projects {
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(max(300px, calc(100% / 3 - 3 * 16px)), 1fr)
+    );
+    gap: 64px;
+}
+
+#main .project {
+    /* border: 1px solid gray; */
+    box-shadow: 1px 1px 4px gray;
+}
+
+#main .project a {
+    text-decoration: none;
+}
+
+#main .project .icon {
+    font-size: 24px;
+    color: black;
+}
+
+#main .project .thumbnail {
+    width: 100%;
+}
+
+#main .project .content {
+    padding: 16px;
+}
+
+#main .project .titleIconContainer {
+    display: flex;
+}
+
+#main .project .title {
+    font-size: 24px;
+    margin: 0;
+    margin-right: auto;
+}
+
+#main .project .description {
+    margin-top: 16px;
+    font-family: "Roboto";
+    color: gray;
+}
+
 @media screen and (width < 900px) and (width >= 650px) {
     #header .content {
         width: 75vw;

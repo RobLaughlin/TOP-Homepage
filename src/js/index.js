@@ -1,31 +1,41 @@
 import "../css/reset.css";
 import "../css/index.css";
+import project1 from "../images/projects/project1.png";
+import project2 from "../images/projects/project2.png";
+import project3 from "../images/projects/project3.png";
+import project4 from "../images/projects/project4.png";
+import project5 from "../images/projects/project5.png";
+import project6 from "../images/projects/project6.png";
 import "iconify-icon";
+import { Project } from "./project.component.js";
 
-// function injectIcons() {
-//     const iconContainer = document.querySelector("#header .iconContainer");
-//     const github = iconContainer.querySelector(".github");
-//     const linkedin = iconContainer.querySelector(".linkedin");
-//     const twitter = iconContainer.querySelector(".twitter");
+function injectProjects() {
+    const projects = [
+        project1,
+        project2,
+        project3,
+        project4,
+        project5,
+        project6,
+    ];
 
-//     // [icon container, icon path, alt text]
-//     const icons = [
-//         [github, mdiGithub, "github"],
-//         [linkedin, mdiLinkedin, "linkedin"],
-//         [twitter, mdiTwitter, "twitter"],
-//     ];
-
-//     icons.forEach((icon) => {
-//         const [container, iconPath, alt] = icon;
-//         const iconImg = document.createElement("span");
-//         // iconImg.alt = alt;
-//         // iconImg.src = iconPath;
-//         container.appendChild(iconImg);
-//     });
-// }
+    const projectContainer = document.querySelector("#main .projects");
+    for (let i = 0; i < projects.length; i++) {
+        const projectImg = projects[i];
+        const title = `Project ${i}`;
+        const desc =
+            "Ex ex excepteur tempor excepteur minim deserunt ex commodo. Occaecat sunt aliqua commodo duis cillum nisi est.";
+        const github = "#";
+        const project = new Project(title, desc, projectImg, github);
+        projectContainer.appendChild(project.render());
+    }
+    projects.forEach((img) => {
+        console.log(img);
+    });
+}
 
 function main() {
-    // injectIcons();
+    injectProjects();
 }
 
 main();

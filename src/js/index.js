@@ -6,7 +6,9 @@ import project3 from "../images/projects/project3.png";
 import project4 from "../images/projects/project4.png";
 import project5 from "../images/projects/project5.png";
 import project6 from "../images/projects/project6.png";
+import footerImage from "../images/footerImage.png";
 import "iconify-icon";
+
 import { Project } from "./project.component.js";
 
 function injectProjects() {
@@ -34,8 +36,20 @@ function injectProjects() {
     });
 }
 
+function injectFooter() {
+    const footer = document.querySelector("#footer");
+    const imgContainer = footer.querySelector(".imgContainer");
+
+    const img = document.createElement("img");
+    img.src = footerImage;
+    img.alt = "Placeholder footer image";
+
+    imgContainer.appendChild(img);
+}
+
 function main() {
     injectProjects();
+    injectFooter();
 }
 
 main();
